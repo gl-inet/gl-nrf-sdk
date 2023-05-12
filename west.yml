@@ -35,6 +35,8 @@ manifest:
       url-base: https://github.com/ant-nrfconnect
     - name: gitlab
       url-base: https://gitlab.com
+    - name: github
+      url-base: https://github.com
   # If not otherwise specified, the projects below should be obtained
   # from the ncs remote.
   defaults:
@@ -189,12 +191,10 @@ manifest:
         - ant
     # GL.iNET repositories.
     - name: gl-dev-board-over-thread
-      repo-path: gl.iot/gl-nrf52840-devkit.git
+      repo-path: gl-inet/gl-thread-dev-board.git
       path: glinet/gl-dev-board-over-thread
       revision: main
-      remote: gitlab
-      groups:
-        - glinet
+      remote: github
     - name: gl-dev-board-over-matter
       repo-path: gl.iot/gl-dev-board-over-matter.git
       path: glinet/gl-dev-board-over-matter
