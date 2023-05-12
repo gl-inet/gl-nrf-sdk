@@ -33,13 +33,14 @@ manifest:
       url-base: https://github.com/memfault
     - name: ant-nrfconnect
       url-base: https://github.com/ant-nrfconnect
-
+    - name: gitlab
+      url-base: https://gitlab.com
   # If not otherwise specified, the projects below should be obtained
   # from the ncs remote.
   defaults:
     remote: ncs
 
-  group-filter: [-homekit, -nrf-802154, -find-my, -ant]
+  group-filter: [-glinet, -homekit, -nrf-802154, -find-my, -ant]
 
   # "projects" is a list of git repositories which make up the NCS
   # source code.
@@ -186,7 +187,21 @@ manifest:
       remote: ant-nrfconnect
       groups:
         - ant
-
+    # GL.iNET repositories.
+    - name: gl-dev-board-over-thread
+      repo-path: gl.iot/gl-nrf52840-devkit.git
+      path: glinet/gl-dev-board-over-thread
+      revision: main
+      remote: gitlab
+      groups:
+        - glinet
+    - name: gl-dev-board-over-matter
+      repo-path: gl.iot/gl-dev-board-over-matter.git
+      path: glinet/gl-dev-board-over-matter
+      revision: main
+      remote: gitlab
+      groups:
+        - glinet
   # West-related configuration for the nrf repository.
   self:
     # This repository should be cloned to ncs/nrf.
